@@ -1,0 +1,21 @@
+﻿@import url(home.css);
+
+.app__decrypt--disabled { /* botão decrypt */
+  background-color: var(--dark-grey);
+  cursor: not-allowed;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.app__output--activated {
+  justify-content: space-around;
+}
+
+.is-hovering:hover {
+  filter: brightness(85%);
+}
+
+.is-hidden {
+  display: none;
+}

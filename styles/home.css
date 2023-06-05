@@ -1,0 +1,261 @@
+﻿/*
+  Caminho relativo: styles\home.css;
+  Descrição: Arquivo de estilização para a homepage;
+  Autor: Samuel Tank;
+  Data de criação: 03/Jun/2023, 20:40;
+  Última modificação: 03/Jun/2023, 20:40;
+*/
+
+/* Configuração da barra de rolagem */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+
+  font-family: 'Montserrat', sans-serif;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+}
+
+/* bloco main */
+.app {
+
+  flex-grow: 2;
+  flex-shrink: 1;
+
+  position: relative;
+
+  display: flex;
+  justify-content: stretch;
+
+  gap: 1em;
+
+  padding: 2em 3em;
+
+  background-color: var(--background);
+}
+
+/* logotipo */
+.app__logo {
+  align-self: flex-start;
+
+  width: 124px;
+}
+
+/* input */
+
+.app__input {
+  flex-grow: 2;
+
+  display: flex;
+  flex-flow: column wrap;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.app__input-box {
+  padding: 1em;
+  font-size: 48px;
+  background-color: transparent;
+  width: 100%;
+  height: 75%;
+
+  color: var(--dark-blue);
+
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.app__input-box:placeholder-shown {
+  color: var(--dark-sky-blue);
+}
+
+.app__input-box::placeholder {
+  color: var(--transparent-blue);
+}
+
+.app__inp-controls {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+
+  gap: 0.5em;
+}
+
+.app__inp-msg {
+  font-weight: 300;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--light-grey);
+}
+
+.app__inp-msg::before {
+  content: url(../assets/svg/circle-info-solid.svg);
+  display: inline-block;
+  width: 1em;
+
+  margin-right: 5px;
+
+  position: relative;
+  top: 3px;
+}
+
+.app__inp-btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 2em;
+}
+
+.app__encrypt {
+  position: relative;
+
+  vertical-align: baseline;
+
+  width: var(--btn-w);
+  height: var(--btn-h);
+
+  border: none;
+  background-color: var(--dark-blue);
+  border-radius: var(--btn-radius);
+
+  color: white;
+  text-transform: capitalize;
+  font-size: var(--btn-font-size);
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.app__decrypt {
+  position: relative;
+
+  width: var(--btn-w);
+  height: var(--btn-h);
+
+
+  border: 2px var(--dark-blue) solid;
+  border-radius: var(--btn-radius);
+  background-color: white;
+
+  color: var(--dark-blue);
+  text-transform: capitalize;
+  font-size: var(--btn-font-size);
+
+  cursor: pointer;
+}
+
+/* output */
+
+.app__output {
+  width: 400px;
+
+  background-color: white;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  text-overflow: clip;
+
+  border-radius: 32px;
+
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.app__out-title {
+  color: var(--dark-grey);
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+
+  margin-bottom: 0.5em;
+}
+
+.app__out-title::first-letter {
+  text-transform: uppercase;
+}
+
+.app__out-description {
+  color: var(--light-grey);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  padding: 2em;
+  text-align: center;
+  font-style: italic;
+}
+
+.app__out-description::first-letter {
+  text-transform: uppercase;
+}
+
+.app__output-box {
+  width: inherit;
+  height: 72%;
+
+  font-size: 22px;
+  padding: 1em;
+
+  color: var(--dark-blue);
+
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.app__copy {
+  width: var(--btn-w);
+  height: var(--btn-h);
+
+  border: 2px var(--dark-blue) solid;
+  border-radius: var(--btn-radius);
+  background-color: white;
+
+  color: var(--dark-blue);
+  text-transform: capitalize;
+  font-size: var(--btn-font-size);
+
+  cursor: pointer;
+}
+
+.app__footer {
+  height: 1.5em;
+
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: lighter;
+  font-size: 15px;
+
+  position: absolute;
+
+  bottom: 0;
+  left: 5px;
+}

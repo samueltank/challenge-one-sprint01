@@ -1,0 +1,107 @@
+﻿<!--
+  Caminho relativo: index.html;
+  Descrição: ;
+  Autor: Samuel Tank;
+  Data de criação: 04/Jun/2023, 21:15;
+  Última modificação: 04/Jun/2023, 21:15;
+-->
+
+<!-- VIEW -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Desafio de codificação da Oracle ONE - Sprit 1"
+    />
+    <meta name="author" content="Samuel Tank" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon (oficinal Alura) -->
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Importações -->
+    <link rel="stylesheet" href="./styles/index-controller.css" />
+    <script src="./scripts/main.js" defer></script>
+
+    <title>Challenge - Encriptador</title>
+  </head>
+
+  <body>
+    <!-- Conteúdo principal -->
+    <main class="app">
+      <!-- logo -->
+      <header>
+        <h1>
+          <img
+            src="./assets/svg/logo.svg"
+            alt="Logo de Alura, uma uma única letra A, minúscula"
+            width="48"
+            class="app__logo"
+          />
+        </h1>
+      </header>
+
+      <!-- Seção para entrada de texto -->
+      <section class="app__input">
+        <textarea
+          class="app__input-box"
+          name="inp-text-box"
+          id="inp-text-box"
+          spellcheck="false"
+          placeholder="Digite seu texto"
+        ></textarea>
+        <div class="app__inp-controls">
+          <p class="app__inp-msg">Apenas letras minúsculas e sem acento.</p>
+          <div class="app__inp-btns">
+            <button class="app__encrypt is-hovering">encriptar</button>
+            <button class="app__decrypt app__decrypt--disabled is-hovering">
+              decriptar
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção para saída do resultado -->
+      <section class="app__output">
+        <img
+          class="app__out-woman-img"
+          src="assets/imgs/woman.png"
+          alt="Imagem de uma boneca em 3d expressando: sem ideia"
+          width="400"
+        />
+
+        <div class="app__msg-block">
+          <p class="app__out-title">nenhuma mensagem encontrada</p>
+          <p class="app__out-description">
+            digite um texto que você deseja criptografar ou descriptografar.
+          </p>
+        </div>
+
+        <textarea
+          class="app__output-box is-hidden"
+          name="output"
+          id="text-output"
+          readonly
+        ></textarea>
+        <button class="app__copy is-hovering is-hidden">copiar</button>
+      </section>
+    </main>
+    <footer class="app__footer">&copy;samuel tank &#x2615;</footer>
+  </body>
+</html>

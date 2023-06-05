@@ -1,0 +1,26 @@
+﻿:root {
+
+  /* VARIÁVEIS GLOBAIS */
+
+  /* Cores */
+
+  --dark-purple: #7D6CF2;
+  --dark-sky-blue: #1E96FC;
+  --dark-blue: #0A2342;
+  --dark-grey: #343A40;
+  --light-blue: #A2D6F9;
+  --light-grey: #495057;
+
+  --transparent-blue: #0a23423a;
+  --background: #E3F2FD; /* ALice Blue */
+
+  /* Valores */
+  --btn-w: 328px;
+  --btn-h: 67px;
+  --btn-radius: 24px;
+  --btn-font-size: 20px;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
