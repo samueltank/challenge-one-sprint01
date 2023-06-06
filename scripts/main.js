@@ -6,7 +6,6 @@
   Autor: Samuel Tank;
   Data de criação: 05/Jun/2023, 01:36;
   Última modificação: 05/Jun/2023, 01:36;
-
 */
 
 const btnEncrypt = document.querySelector(".app__encrypt");
@@ -24,7 +23,6 @@ const ciphers = new Map([
 ]);
 
 const activeOut = () => {
-
   const classHidden = "is-hidden";
   const adjustSection = "app__output--activated";
 
@@ -40,7 +38,7 @@ const activeOut = () => {
     btnCopy.classList.add(classHidden);
 
     return;
-  };
+  }
 
   if (!womanImg.classList.contains(classHidden))
     womanImg.classList.add(classHidden);
@@ -54,15 +52,21 @@ const activeOut = () => {
 
   /* Ajuste da seção */
   document.querySelector(".app__output").classList.add(adjustSection);
-}
+};
 
-/* converte todas os caracteres para minúsculo */
+/* restringe a entrada e trava o botão de decriptação */
 inputText.addEventListener("input", (event) => {
   let btnDisabled = "app__decrypt--disabled";
   const input = event.target;
+  const inpValue = input.value;
 
-  input.value = input.value.toLowerCase();
+  /* trava tudo, menos os caracteres de a-z */
+  if (/[^a-z]/g.test(inpValue)) {
+    const tmpValue = inpValue.slice(0, inpValue.length - 1);
+    input.value = tmpValue;
+  }
 
+  /* trava e destrava o botão decriptação */
   if (inputText.value !== "") {
     btnDecrypt.classList.remove(btnDisabled);
     btnDecrypt.addEventListener("click", decrypt, true);
@@ -83,7 +87,7 @@ const encrypt = () => {
   outputText.textContent = input;
 
   activeOut();
-}
+};
 
 /* Decripta a mensagem */
 const decrypt = () => {
@@ -98,7 +102,7 @@ const decrypt = () => {
   console.log("Clicou!");
 
   activeOut();
-}
+};
 
 /* Faz o resguardo do conteúdo na área de transferência do navegador */
 const clipboardCopy = async () => {
@@ -108,7 +112,7 @@ const clipboardCopy = async () => {
   await navigator.clipboard.writeText(txt);
 
   console.log("copiado");
-}
+};
 
 /* Ativa a função ao clicar no botão "copiar" */
 btnCopy.addEventListener("click", () => {
