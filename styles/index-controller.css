@@ -3,4 +3,4 @@
 @import url(reset.css); /* Reset */
 @import url(global-settings.css); /* Todos as variáveis globais */
 @import url(home.css);
-@import url(states.css);
+@import url(screens.css);

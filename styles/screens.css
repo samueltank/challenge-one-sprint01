@@ -1,0 +1,84 @@
+﻿@import url(home.css);
+@import url(global-settings.css);
+@import url(states.css);
+
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  :root {
+    --btn-w: 75vw;
+    --input-box-fnt-size: 26px;
+  }
+
+  .app {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0 3em 0;
+  }
+
+  .app__logo {
+    width: 88px;
+  }
+
+  .app__input {
+    flex-flow: column nowrap;
+  }
+
+  .app__input-box {
+    height: 35vh;
+    font-size: var(--input-box-fnt-size);
+
+    padding: 0;
+  }
+
+  .app__input-box::placeholder {
+    font-size: var(--input-box-fnt-size);
+    color: var(--dark-blue);
+  }
+
+  .app__inp-btns {
+    flex-flow: column nowrap;
+    gap: 0.5em;
+  }
+
+  .app__inp-msg {
+    font-size: 12px;
+  }
+
+  .app__inp-msg::before {
+    top: 1px;
+  }
+
+  .app__output {
+    flex-flow: column nowrap;
+    width: 90vw;
+
+    padding: 1.5em;
+  }
+
+  .app__out-woman-img {
+    display: none;
+  }
+
+  .app__footer {
+    display: inline-block;
+    right: 0;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  :root {
+    --btn-w: 250px;
+  }
+}

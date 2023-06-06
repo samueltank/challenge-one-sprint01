@@ -8,6 +8,12 @@
 
 /* Configuração da barra de rolagem */
 
+@import url(states.css);
+
+* {
+  box-sizing: border-box;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -27,7 +33,6 @@
 }
 
 body {
-
   font-family: 'Montserrat', sans-serif;
 
   width: 100vw;
@@ -40,11 +45,10 @@ body {
 
 /* bloco main */
 .app {
+  position: relative;
 
   flex-grow: 2;
   flex-shrink: 1;
-
-  position: relative;
 
   display: flex;
   justify-content: stretch;
@@ -256,6 +260,6 @@ body {
 
   position: absolute;
 
-  bottom: 0;
-  left: 5px;
+  bottom: 3px;
+  left: 10px;
 }

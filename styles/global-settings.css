@@ -3,7 +3,6 @@
   /* VARIÁVEIS GLOBAIS */
 
   /* Cores */
-
   --dark-purple: #7D6CF2;
   --dark-sky-blue: #1E96FC;
   --dark-blue: #0A2342;
@@ -23,4 +22,5 @@
 
 * {
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }

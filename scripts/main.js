@@ -24,14 +24,29 @@ const ciphers = new Map([
 ]);
 
 const activeOut = () => {
-  if (outputText.value === "") return;
 
   const classHidden = "is-hidden";
   const adjustSection = "app__output--activated";
 
   /* Esconde a imagem e os textos */
-  document.querySelector(".app__out-woman-img").classList.add(classHidden);
-  document.querySelector(".app__msg-block").classList.add(classHidden);
+  const womanImg = document.querySelector(".app__out-woman-img");
+  const msgBlock = document.querySelector(".app__msg-block");
+
+  if (outputText.value === "") {
+    womanImg.classList.remove(classHidden);
+    msgBlock.classList.remove(classHidden);
+
+    outputText.classList.add(classHidden);
+    btnCopy.classList.add(classHidden);
+
+    return;
+  };
+
+  if (!womanImg.classList.contains(classHidden))
+    womanImg.classList.add(classHidden);
+
+  if (!msgBlock.classList.contains(classHidden))
+    msgBlock.classList.add(classHidden);
 
   /* Ativa a caixa de saída e o botão "copiar" */
   outputText.classList.remove(classHidden);
@@ -45,6 +60,7 @@ const activeOut = () => {
 inputText.addEventListener("input", (event) => {
   let btnDisabled = "app__decrypt--disabled";
   const input = event.target;
+
   input.value = input.value.toLowerCase();
 
   if (inputText.value !== "") {
